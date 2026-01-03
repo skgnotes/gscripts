@@ -9,7 +9,7 @@ This guide defines the **Standard Operating Procedure (SOP)** for executing Goog
 Unless specifically required (e.g., container-bound scripts for Sheets), **NEVER create a new project**. Always use:
 
 - **Project Name:** Universal Script Utility
-- **Project ID:** `1lH3AKqFaGJf61VpC6sd2MfrQZ47mppDtWFP...` *(Check `assets/` or browser URL for full ID)*
+- **Project ID:** `1lH3AKqFaGJf61VpC6sd2MfrQZ47mppDtWFPaL5ycZOdyrEBQQH1-kaq8`
 - **Pre-Authorized Permissions:**
   - `gmail.modify` (Read/Write Emails)
   - `drive` (Manage Files)
