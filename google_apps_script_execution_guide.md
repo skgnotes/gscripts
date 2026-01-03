@@ -17,6 +17,12 @@ Unless specifically required (e.g., container-bound scripts for Sheets), **NEVER
   - `documents` (Edit Docs)
   - `calendar` (Manage Events)
 
+### Quick Access
+**Project URL:** https://script.google.com/home/projects/1lH3AKqFaGJf61VpC6sd2MfrQZ47mppDtWFPaL5ycZOdyrEBQQH1-kaq8/edit
+
+> [!TIP]
+> Bookmark this URL for fast access to the project editor.
+
 ## 2. Setup & Preparation
 Ensure `clasp` is installed and the utility project is cloned locally.
 
@@ -73,6 +79,15 @@ Always verify the *actual* result in the target application.
 ## 5. Post-Execution Documentation
 **Goal:** Maintain a lightweight index. Do NOT duplicate code into markdown files.
 
+### Quick Commit (Optional Shell Alias)
+Add to your `.bashrc` or `.zshrc` for faster commits:
+```bash
+alias gscript-commit='cd ~/Documents/File\ system\ scrips/gscripts && git add . && git commit -m'
+```
+**Usage:** `gscript-commit "Add script: task_name" && git push origin master`
+
+### Standard Steps
+
 1.  **Commit Scripts to GitHub:**
     Ensure you are in the root of this repository.
     ```bash
@@ -89,7 +104,29 @@ Always verify the *actual* result in the target application.
     | :--- | :--- | :--- | :--- |
     | 2024-01-03 | Delete Promo Emails | ✅ Success | [delete_promo.js](https://github.com/skgnotes/gscripts/blob/master/delete_promo.js) |
 
-## 6. Troubleshooting
+## 6. Cleanup (Removing Scripts)
+
+To fully remove a script file from all locations:
+
+1.  **Delete Locally:**
+    ```bash
+    rm universal_utility/old_script.js
+    ```
+
+2.  **Delete from Apps Script:**
+    > [!IMPORTANT]
+    > Clasp cannot delete remote files. You must delete via the UI.
+
+    - Open the project URL
+    - Click the file's **⋮** menu (File operations)
+    - Select **Delete** → Confirm
+
+3.  **Commit & Push:**
+    ```bash
+    git add -A && git commit -m "Remove old_script.js" && git push origin master
+    ```
+
+## 7. Troubleshooting
 
 | Issue | Solution |
 | :--- | :--- |
@@ -98,7 +135,7 @@ Always verify the *actual* result in the target application.
 | **Clasp Push fails** | Check your `appsscript.json`. If you enabled new advanced services in the browser, you must `clasp pull` first. |
 | **Monaco Editor Focus** | The editor is an iframe. Ensure you click *inside* the code area before typing. |
 
-## Appendix: Manual Method (Legacy)
+## 8. Appendix: Manual Method (Legacy)
 *Use this ONLY if Clasp fails or for one-off, isolated environments.*
 
 1.  Go to `script.new`.
