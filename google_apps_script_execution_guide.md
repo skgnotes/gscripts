@@ -10,12 +10,45 @@ Unless specifically required (e.g., container-bound scripts for Sheets), **NEVER
 
 - **Project Name:** Universal Script Utility
 - **Project ID:** `1lH3AKqFaGJf61VpC6sd2MfrQZ47mppDtWFPaL5ycZOdyrEBQQH1-kaq8`
-- **Pre-Authorized Permissions:**
-  - `gmail.modify` (Read/Write Emails)
-  - `drive` (Manage Files)
-  - `spreadsheets` (Edit Sheets)
-  - `documents` (Edit Docs)
-  - `calendar` (Manage Events)
+
+### Pre-Authorized Permissions
+
+#### OAuth Scopes
+| Service | Scope | Access Level |
+| :--- | :--- | :--- |
+| **Gmail** | `mail.google.com` | Full access (read, compose, send, delete) |
+| **Gmail** | `gmail.modify`, `gmail.compose`, `gmail.send` | Modify, compose, send emails |
+| **Drive** | `drive` | Full access to all files |
+| **Drive** | `drive.file` | Access to app-specific files |
+| **Sheets** | `spreadsheets` | Full access to all spreadsheets |
+| **Docs** | `documents` | Full access to all documents |
+| **Calendar** | `calendar`, `calendar.events` | Full access + event management |
+| **Contacts** | `contacts` | Full access (read, edit, delete) |
+| **Tasks** | `tasks` | Full access (create, edit, delete) |
+| **Forms** | `forms` | Full access to Google Forms |
+| **Slides** | `presentations` | Full access to presentations |
+| **Script** | `script.external_request` | Connect to external services |
+| **Script** | `script.send_mail` | Send email as user |
+| **Script** | `script.scriptapp` | Run when user is not present |
+| **Admin** | `admin.directory.user` | Manage domain users |
+| **Admin** | `admin.directory.group` | Manage domain groups |
+| **AdSense** | `adsense.readonly` | View AdSense data |
+| **User Info** | `userinfo.email` | Access user email address |
+
+#### Enabled Advanced Services
+| Service | API Version |
+| :--- | :--- |
+| AdSense | v2 |
+| AdminDirectory | directory_v1 |
+| Calendar | v3 |
+| Drive | v3 |
+| Sheets | v4 |
+| Docs | v1 |
+| Gmail | v1 |
+| Tasks | v1 |
+
+> [!NOTE]
+> All permissions were authorized on 2026-01-04. New scripts pushed to this project will automatically have access to all these services without re-authorization.
 
 ### Quick Access
 **Project URL:** https://script.google.com/home/projects/1lH3AKqFaGJf61VpC6sd2MfrQZ47mppDtWFPaL5ycZOdyrEBQQH1-kaq8/edit
